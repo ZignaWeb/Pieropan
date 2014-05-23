@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="r/css/zigna.css" />    
     <script src="r/js/modernizr.js"></script>
   </head>
-  <body id="home">
+  <body id="home" class="prueba">
   <header class="small-12">
   	<?php include 'html-scraps/nav.php'; ?>
   </header>
