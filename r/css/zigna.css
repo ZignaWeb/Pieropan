@@ -24,23 +24,23 @@ body{
 	font-family:"Regular",Georgia, "Times New Roman", Times, serif;
 	color:#4f4f4f !important;
 }
-body#home{	
+.home{	
 	background:url(../img/Private-party-table-setting.jpg) fixed no-repeat;
 	background-size:cover;
 }
-body#empresa{
+.empresa{
 	background:url(../img/rojo.jpg) fixed no-repeat;
 	background-size:cover;
 }
-body#catalogo{
+.catalogo{
 	background:url(../img/yellow.jpg) fixed no-repeat;
 	background-size:cover;
 }
-body#contacto{
+.contacto{
 	background: url(../img/copas.jpg) fixed no-repeat;
     background-size: cover;
 }
-a {
+a:not(.custom-nav) {
 	color:#333;
 }
 .large-font{

@@ -6,10 +6,12 @@
     <title>Casa Pieropan - Inicio</title>
     <link rel="stylesheet" href="r/css/normalize.css"/> 
     <link rel="stylesheet" href="r/css/foundation.css" />
+    <link rel="stylesheet" href="r/css/slidebars.min.css" /> 
     <link rel="stylesheet" href="r/css/zigna.css" />    
     <script src="r/js/modernizr.js"></script>
   </head>
   <body id="empresa">
+  <div id="sb-site" class="empresa">
   <header class="small-12">
   	<?php include 'html-scraps/nav.php'; ?>
   </header>  
@@ -24,22 +26,17 @@ PROIN feugiat ultrices dignissim. Nullam sagittis neque non erat laoreet, at lob
   </section>
   <footer>
   </footer>
+  </div>
   
-  <script src="r/js/vendor/jquery.js"></script>  
-  <script src="r/js/foundation.min.js"></script>
-  <script type="text/javascript">
-  $( document ).ready(function() {
-	  $("#empresa").mouseenter(function(){
-		  $(".submenu").css("display","block");
-		  $(this).mouseleave(function(){
-			  $(".submenu").css("display","none");
-		  });
-	  });
-  });
-  </script>
-  <script>
-  	$(document).foundation();
-  </script>  
+	<script src="r/js/vendor/jquery.js"></script>
+    <script src="r/js/vendor/slidebars.min.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $.slidebars();
+            });
+        }) (jQuery);
+    </script>  
  
   </body>
 </html>
