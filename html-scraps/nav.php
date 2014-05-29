@@ -35,50 +35,9 @@
         </div>
     </nav>
 </div>
-<style>
-	.custom-nav{
-		background:#333;
-		height:50px;
-	}
-	.custom-nav a, .custom-nav span, .sb-slidebar a {
-		color:#FFF;
-	}
-	.custom-nav div:nth-of-type(1){
-		padding-left:0;
-		padding-top:15px;
-	}
-	.custom-nav div:nth-of-type(2){
-		padding-top:13px;		
-	}
-	.custom-nav div:nth-of-type(2) span{
-		font-size:120%;	
-	}
-	.custom-nav div:nth-of-type(3){
-		padding-top:8px;
-		padding-right:0 !important;		
-	}
-	.custom-nav div:nth-of-type(3) span{
-		font-size:12px;
-		white-space:nowrap;
-	}
-	ul{
-		list-style-type:none;
-		padding:0;
-		margin:0;
-	}
-	.sb-slidebar ul{
-		padding:50px 0 0 0;
-	}
-	.sb-slidebar ul li {
-		border-bottom:1px solid #333;
-		padding-left:15px;
-	}
-	.sb-slidebar ul li:hover {
-		background:#333;
-	}
-</style>
 
-<div class="sb-slidebar sb-left sb-width-thin">
+
+<div class="show-for-small-only sb-slidebar sb-left sb-width-thin">
     <ul>
     	<li><a href="index.php">Inicio</a></li>
     	<li><a href="empresa.php">Empresa</a></li>

@@ -6,12 +6,12 @@
     <title>Casa Pieropan - Inicio</title>
     <link rel="stylesheet" href="r/css/normalize.css"/> 
     <link rel="stylesheet" href="r/css/foundation.css" />
-    <link rel="stylesheet" href="r/css/slidebars.min.css" /> 
+    <link rel="stylesheet" href="r/css/slidebars.css" /> 
     <link rel="stylesheet" href="r/css/zigna.css" />    
     <script src="r/js/modernizr.js"></script>
   </head>
-  <body id="contacto">
-  <div id="sb-site" class="contacto">
+  <body id="contacto" class="contacto">
+  <div id="sb-site" >
   <header class="small-12">
   	<?php include 'html-scraps/nav.php'; ?>
   </header>  
