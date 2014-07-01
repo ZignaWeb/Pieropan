@@ -278,10 +278,7 @@ article{
 
 /**************************************************************************/
 /***************************CATALOGO***************************************/
-#catalogo .wrap-thumbs{
-}
-#catalogo .wrap-thumbs a {
-}
+
 .panel {
 	font-family:inherit;
 	padding: 5px !important;
@@ -341,9 +338,10 @@ article{
 }
 
 /**************************************************************************/
-.view {
+.view {;
     float: left;
-    border: 5px solid #fff;
+	margin:1px;
+    border: 2px solid #fff;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -360,6 +358,8 @@ article{
     left: 0
 }
 .view img {
+	width:100%;
+	height:auto;
     display: block;
     position: relative
 }
