@@ -28,7 +28,7 @@ body  {
     margin: 0;
     height: 100% !important;	
 	font-family:"Regular",Georgia, "Times New Roman", Times, serif;
-	color:#4f4f4f !important;
+	color:white !important;
 }
 .home{	
 	background:url(../img/Private-party-table-setting.jpg) fixed no-repeat;
@@ -93,7 +93,7 @@ header{
 }
 #cssmenu ul {
   height:6rem !important;
-  background:url(../img/headerBackground.png);
+  background-color: rgba(132,189,104, 0.9);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -193,7 +193,6 @@ header{
 }
 /*width: 40.063em; }
 
-
   width: 64.063em; }
 
   width: 90.063em; }
@@ -254,7 +253,8 @@ article{
 }
 #side{
 	background:#FFF;
-	opacity:0.9;
+	opacity:1;
+	background-color: rgba(245,241,222, 0.9);
 	height:100% !important;
 	z-index:200 !important;
 }
@@ -338,16 +338,15 @@ article{
 }
 
 /**************************************************************************/
-.view {;
+
+.view {
+	border:transparent 10px solid;
     float: left;
-	margin:1px;
-    border: 2px solid #fff;
     overflow: hidden;
     position: relative;
     text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
     cursor: default;
-    background: #fff url(../img/bgimg.jpg)) no-repeat center center
+	max-height:200px;
 }
 .view .mask, .view .content {
     width: 100%;
@@ -363,18 +362,28 @@ article{
     display: block;
     position: relative
 }
+#side .view {
+}
+#side .view.no-focus img {
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+#side .view.no-focus:hover img {
+	opacity: 100;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
 .view h2 {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 17px;
+    font-size: 15px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(132,189,104, 0.74);
     margin: 20px 0 0 0
 }
 .view p {
-    font-family: Georgia, serif;
+    font-family: Regular, serif;
     font-style: italic;
     font-size: 12px;
     position: relative;
@@ -382,10 +391,13 @@ article{
     padding: 10px 20px 20px;
     text-align: center
 }
+@media only screen and (max-width: 40.063em){
+	
+}
 .view a.info {
     display: inline-block;
     text-decoration: none;
-    padding: 7px 14px;
+    padding: 5px 14px;
     background: #000;
     color: #fff;
     text-transform: uppercase;
@@ -401,7 +413,8 @@ article{
 }
 .view-first .mask {
     opacity: 0;
-    background-color: rgba(219,127,8, 0.7); 
+	background-color:#84BD68;
+    /*background-color: rgba(219,127,8, 0.7); */
     transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
@@ -419,9 +432,9 @@ article{
     transition: all 0.2s ease-in-out;
 }
 
-.view-first:hover img { 
+/*.view-first:hover img { 
     transform: scale(1.1);
-} 
+} */
 .view-first:hover .mask { 
     opacity: 1;
 }
@@ -438,18 +451,18 @@ article{
     transition-delay: 0.5s;
 }
 /*animacion*/
-.view-first img {
+/*.view-first img {
    -webkit-transition: all 0.2s linear;
    -moz-transition: all 0.2s linear;
    -o-transition: all 0.2s linear;
    -ms-transition: all 0.2s linear;
    transition: all 0.2s linear;
-}
+}*/
 .view-first .mask {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   background-color: rgba(219,127,8, 0.7);
+   background-color: rgba(132,189,104, 0.7);
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
@@ -486,13 +499,13 @@ article{
    -ms-transition: all 0.2s linear;
    transition: all 0.2s linear;
 }
-.view-first:hover img {
+/*.view-first:hover img {
    -webkit-transform: scale(1.1,1.1);
    -moz-transform: scale(1.1,1.1);
    -o-transform: scale(1.1,1.1);
    -ms-transform: scale(1.1,1.1);
    transform: scale(1.1,1.1);
-}
+}*/
 .view-first a.info {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
@@ -533,4 +546,7 @@ article{
    -o-transition-delay: 0.2s;
    -ms-transition-delay: 0.2s;
    transition-delay: 0.2s;
-}*/
+}
+
+/**********************/
+				
