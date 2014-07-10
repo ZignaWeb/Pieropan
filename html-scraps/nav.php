@@ -5,16 +5,16 @@
     </li>
     <li class='has-sub'><a href='catalogo.php'><span class="menu-section">Catálogo</span></a>
       <ul>
-         <li><a href='#'><span>Rubro 1</span></a></li>
-         <li><a href='#'><span>Rubro 1</span></a></li>
-         <li><a href='#'><span>Rubro 1</span></a></li>                                  
-         <li class='last'><a href='#'><span>Rubro 4</span></a></li>
+         <li><a href='#'>Vajilla</a></li>
+         <li><a href='#'>Carpas</a></li>
+         <li><a href='#'>Rubro 3</a></li>                                  
+         <li class='last'><a href='#'>Rubro 4</a></li>
       </ul>
     </li>
     <li class='last'><a href='contacto.php'><span class="menu-section">Contacto</span></a></li>
     <span class="text-center brand">CASA PIEROPAN</span>
     <div class="text-center social-media">
-       <a href="#"><img src="r/img/webicon-facebook-s.png"></a>
+       <a id="light" href="#"><img src="r/img/fb.png"></a>
        <br /><span style="font-size:12px;">sitio por: <a href="http://www.zigna.com.ar" target="_blank">ZIGNA</a></span>
    </div>
 </ul>
@@ -28,10 +28,10 @@
         <div class="small-8 text-center column">
         <span>Casa Pieropan</span>
         </div>
-        <div class="small-2 column text-center small-font">
-        <a href="#"><img src="r/img/webicon-facebook-s.png"></a>
-        <br />
-        <span><a href="http://www.zigna.com.ar">ZIGNA</a></span>
+        <div class="social-media-small small-2 column text-center small-font">
+            <a href="#"><img src="r/img/fb.png"></a>
+            <br />
+            <span><a href="http://www.zigna.com.ar">ZIGNA</a></span>
         </div>
     </nav>
 </div>
