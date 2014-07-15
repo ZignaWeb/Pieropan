@@ -17,7 +17,7 @@
   </header>
   <section class="small-12">
       <article id="side" class="small-12 medium-4 large-3 column">
-        <div class="small-6 medium-12 large-6 view no-focus rubro">
+        <div class="show-for-medium-up small-6 medium-12 large-6 view rubro">
             <a href="#">
                 <img src="r/img/rubro-1.jpg" />
                 <div class="mask"></div>
@@ -25,28 +25,15 @@
                     <h2>Vajilla</h2>
                 </div>
             </a>
-        </div>        
-        <div class="small-6 medium-12 large-6 view rubro">
-            <img src="r/img/rubro-3.jpg" />
-            <div class="mask"></div>
-            <div class="content">
-                <h2>Carpas</h2>
-            </div>
-        </div>
-        <div class="small-6 medium-12 large-6 view no-focus rubro">
-            <a href="#">
-                <img src="r/img/rubro-1.jpg" />
-                <div class="mask"></div>
-                <div class="content">
-                    <h2>Algo</h2>
-                </div>
-            </a>
-        </div>        
+        </div>    
+        <div class="show-for-small-only small-12 text-center small-rubro">
+        <a href="#">Rubro 1</a>
+        </div>     
       </article>
       <article id="content" class="small-12 medium-8 large-9 column text-center">
         
         <div class="prod small-6 medium-4 large-2 view view-first">  
-             <img src="r/img/articulo-1.jpg" />  
+             <img src="r/img/articulomarked.jpg" />  
              <div class="mask">  
              <h2>Producto1</h2>  
              <p>Descripción</p>  
@@ -55,41 +42,11 @@
                  </a>  
              </div> 
         </div> 
-        <div class="prod small-6 medium-4 large-2 view view-first">  
-             <img src="r/img/articulo-1.jpg" />  
-             <div class="mask">  
-             <h2>Producto2</h2>  
-             <p>Descripción</p>  
-                 <a href="#pop-2" class="info open-popup-link">
-                 	Leer más
-                 </a> 
-             </div>  
-        </div> 
-        <div class="prod small-6 medium-4 large-2 view view-first">  
-             <img src="r/img/articulo-1.jpg" />  
-             <div class="mask">  
-             <h2>Producto3</h2>  
-             <p>Descripción</p>  
-                 <a href="#" class="info">Leer más</a>  
-             </div> 
-        </div>
-        <div class="prod small-6 medium-4 large-2 view view-first">  
-             <img src="r/img/articulo-1.jpg" />  
-             <div class="mask">  
-             <h2>Producto4</h2>  
-             <p>Descripción</p>  
-             	<a href="#" class="info">Leer más</a>  
-             </div> 
-        </div> 
       </article>
   </section>
   <div id="pop-1" class="white-popup mfp-hide">
   <img src="r/img/rojo.jpg">
   <p>POP1 Esto es una descripción mas completa del producto con una foto mas grande</p>
-  </div>
-  <div id="pop-2" class="white-popup mfp-hide">
-  <img src="r/img/rojo.jpg">
-  <p>POP2 Esto es una descripción mas completa del producto con una foto mas grande</p>
   </div>
   
 	<script src="r/js/vendor/jquery.js"></script>  
@@ -108,6 +65,13 @@
 		  midClick: true,
 		  removalDelay: 300,
 		  mainClass: 'mfp-fade'
+		});
+    </script>
+    <script>
+		$("#b li a").hover(function(){
+			$("#a").attr("style", "color: #333333 !important");
+		},function(){
+			$("#a").attr("style", "color: #f4f4f4");
 		});
     </script>
   </body>

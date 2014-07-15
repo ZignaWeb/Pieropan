@@ -3,8 +3,8 @@
     <li class="has-sub"><a class="no-hover" href="index.php"><img class="logo" src="r/img/logo2.png"></a></li>   
     <li class='has-sub'><a href='empresa.php'><span class="menu-section">Empresa</span></a>             
     </li>
-    <li class='has-sub'><a href='catalogo.php'><span class="menu-section">Catálogo</span></a>
-      <ul>
+    <li class='has-sub'><a href='catalogo.php'><span id="a" class="menu-section">Catálogo</span></a>
+      <ul id="b">
          <li><a href='#'>Vajilla</a></li>
          <li><a href='#'>Carpas</a></li>
          <li><a href='#'>Rubro 3</a></li>                                  
@@ -41,7 +41,7 @@
     <ul>
     	<li><a href="index.php">Inicio</a></li>
     	<li><a href="empresa.php">Empresa</a></li>
-    	<li><a href="catalogo.php">Catálogo</a></li>
+    	<li class="side-has-submenu"><a href="catalogo.php">Catálogo</a></li>     
     	<li><a href="contacto.php">Contacto</a></li>                
     </ul>
 </div>

@@ -37,7 +37,14 @@ Mauris vel dui vestibulum magna placerat adipiscing sit amet aliquam augue. Null
                 $.slidebars();
             });
         }) (jQuery);
-    </script>  
+    </script>     
+    <script>
+		$("#b li a").hover(function(){
+			$("#a").attr("style", "color: #333333 !important");
+		},function(){
+			$("#a").attr("style", "color: #f4f4f4");
+		});
+    </script> 
  
   </body>
 </html>

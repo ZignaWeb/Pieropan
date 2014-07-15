@@ -35,7 +35,7 @@ span{
 	color:#f4f4f4 !important;
 }
 .home{	
-	background:url(../img/yellow.jpg) fixed no-repeat;
+	background:url(../img/catalogobg.jpg) fixed no-repeat;
 	background-size:cover;
 }
 .empresa{
@@ -146,20 +146,21 @@ header{
 }
 #cssmenu li > a,
 #cssmenu ul li > a {
-	-webkit-transition: background 0.3s ease-out;
-	-moz-transition: background 0.3s ease-out;
-	-ms-transition: background 0.3s ease-out;
-	-o-transition: background 0.3s ease-out;
-	transition: background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-in;
+	-moz-transition: background 0.3s ease-in;
+	-ms-transition: background 0.3s ease-in;
+	-o-transition: background 0.3s ease-in;
+	transition: background 0.3s ease-in;
 }
 #cssmenu li > a:hover,
-#cssmenu ul li:hover > a {
+#cssmenu ul li:hover > a{
 	/*main link*/
   background:#f4f4f4;
   text-decoration: none;
 }
 #cssmenu li > a:hover span,
-#cssmenu ul li:hover > span {
+#cssmenu ul li:hover > span,
+#cssmenu li.side-has-sub:hover {
 	color:#333333 !important;
 }
 .no-hover:hover {
@@ -271,10 +272,24 @@ ul{
 .sb-slidebar ul li:hover {
 	background:#333;
 }
+.side-sub-menu{
+	padding:0 !important;
+	padding-left:5px !important;
+	font-size:90%;
+	color:white;
+	display:none;
+}
 /*************************************************************************/
 
 /***************************ARTICLE*******************************************/
 section {
+	position:absolute;
+	top:0;
+    left:0;
+    right:0;
+	min-height:100%;
+}
+section{
 	position:absolute;
 	top:0;
     left:0;
@@ -429,11 +444,25 @@ article{
     text-align: center
 }
 @media only screen and (max-width: 40.063em){
+	#empresa section, #contacto section{
+		background-color: rgba(255,255,255, .70);
+	}
 	#content {
 		padding-top:5px;
 	} 
 	#side{
-		padding-top:55px;		
+		background:none;
+		padding-top:60px;		
+	}
+	#catalogo #side{
+		background:none;
+	}
+	.small-rubro{
+		background:#333333;
+		color:#f4f4f4;
+		margin:5px 0 5px 0;
+		padding:5px 0 5px 0;
+		float:left;
 	}
 }
 .view a.info {
