@@ -1,24 +1,37 @@
-<? include ("cp/sql.php"); ?>
+<?
+include ("cp/r/sql.php");
+$rt = "SELECT * FROM ag_rubros WHERE mostrar = 1";
+$rq = mysql_query($rt);
+$rows = mysql_num_rows($rq);
+while ($rd = mysql_fetch_assoc($rq)){
+	$rubro[] = $rd["nombre"];
+	$rubroId[] = $rd["id"];
+}
+?>
 <div id='cssmenu' class="show-for-medium-up">  
-<ul>
-    <li class="has-sub"><a class="no-hover" href="index.php"><img class="logo" src="r/img/logo2.png"></a></li>   
-    <li class='has-sub'><a href='empresa.php'><span class="menu-section">Empresa</span></a>             
-    </li>
-    <li class='has-sub'><a href='catalogo.php'><span id="a" class="menu-section">Catálogo</span></a>
-      <ul id="b">
-         <li><a href='#'></a></li>
-         <li><a href='#'></a></li>
-         <li><a href='#'></a></li>                                  
-         <li class='last'><a href='#'></a></li>
-      </ul>
-    </li>
-    <li class='last'><a href='contacto.php'><span class="menu-section">Contacto</span></a></li>
-    <span class="text-center brand">CASA PIEROPAN</span>
-    <div class="text-center social-media">
-       <a id="light" href="#"><img src="r/img/fb.png"></a>
-       <br /><span style="font-size:12px;">sitio por: <a href="http://www.zigna.com.ar" target="_blank">ZIGNA</a></span>
-   </div>
-</ul>
+    <ul>
+        <li class="has-sub"><a class="no-hover" href="index.php"><img class="logo" src="r/img/logo2.png"></a></li>   
+        <li class='has-sub'><a href='empresa.php'><span class="menu-section">Empresa</span></a>             
+        </li>
+        <li class='has-sub'><a href='catalogo.php'><span id="a" class="menu-section">Catálogo</span></a>
+          <ul id="b">
+			<?
+            for($i = 0; $i < $rows; $i++){
+				if($i == $rows-1){
+					echo "<li class='last'><a href='catalogo.php?id=".$rubroId[$i]."'>".$rubro[$i]."</a></li>";
+				}
+            	else {echo "<li><a href='catalogo.php?id=".$rubroId[$i]."'>".$rubro[$i]."</a></li>";}
+            }                
+            ?>
+          </ul>
+        </li>
+        <li class='last'><a href='contacto.php'><span class="menu-section">Contacto</span></a></li>
+        <span class="text-center brand">CASA PIEROPAN</span>
+        <div class="text-center social-media">
+           <a id="light" href="#"><img src="r/img/fb.png"></a>
+           <br /><span style="font-size:12px;">sitio por: <a href="http://www.zigna.com.ar" target="_blank">ZIGNA</a></span>
+       </div>
+    </ul>
 </div>
 
 <div class="small-12 custom-nav show-for-small-only">

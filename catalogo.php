@@ -13,35 +13,78 @@
   </head>
   <body id="catalogo" class="catalogo">
   <header class="small-12">
-  	<?php include 'html-scraps/nav.php'; ?>
+  	<?php 
+		include 'html-scraps/nav.php';
+		if (isset($_GET['id'])) {
+			$getRubroID = $_GET['id'];
+		} else {
+			$getRubroID = 1;
+		}
+		$pt = "SELECT * FROM ag_productos WHERE mostrar = 1 AND rubroid = ".$getRubroID."";
+		$pq = mysql_query($pt);
+		$rowsp = mysql_num_rows($pq);
+		while ($pd = mysql_fetch_assoc($pq)){
+			$producto[] = $pd["nombre"];
+			$descripcion[] = $pd["desc"];
+			$productoId[] = $pd["id"];
+			$productoIdR[] = $pd["rubroid"];
+			
+			$it = "SELECT url FROM ag_media WHERE dep_table = 'productos' AND dep_id = ".$pd['id']."";
+			$iq = mysql_query($it);
+			$id = mysql_fetch_assoc($iq);
+			$mediaUrl[] = $id["url"];
+		}
+	?>
   </header>
   <section class="small-12">
-      <article id="side" class="small-12 medium-4 large-3 column">
-        <div class="show-for-medium-up small-6 medium-12 large-6 view rubro">
-            <a href="#">
-                <img src="r/img/rubro-1.jpg" />
-                <div class="mask"></div>
-                <div class="content">
-                    <h2>Vajilla</h2>
-                </div>
-            </a>
-        </div>    
-        <div class="show-for-small-only small-12 text-center small-rubro">
-        <a href="#">Rubro 1</a>
-        </div>     
+	  <article id="side" class="small-12 medium-4 large-3 column">
+	  <?
+	  	for($i=0;$i<$rows;$i++){
+			if($getRubroID == $rubroId[$i]){
+				echo "<div class='show-for-medium-up small-6 medium-12 large-6 view rubro'>
+				<a href='catalogo.php?id=".$rubroId[$i]."'>
+					<img src='r/img/rubro-1.jpg' />
+					<div class='mask'></div>
+					<div class='content'>
+						<h2>".$rubro[$i]."</h2>
+					</div>
+				</a>
+				</div>
+				<div class='show-for-small-only small-12 text-center small-rubro'>
+				<a href='catalogo.php?id=".$rubroId[$i]."'>".$rubro[$i]."</a>
+				</div>";
+			} else {
+				echo "<div class='show-for-medium-up small-6 medium-12 large-6 view rubro no-focus'>
+				<a href='catalogo.php?id=".$rubroId[$i]."'>
+					<img src='r/img/rubro-1.jpg' />
+					<div class='mask'></div>
+					<div class='content'>
+						<h2>".$rubro[$i]."</h2>
+					</div>
+				</a>
+				</div>
+				<div class='show-for-small-only small-12 text-center small-rubro'>
+				<a href='catalogo.php?id=".$rubroId[$i]."'>".$rubro[$i]."</a>
+				</div>";
+			}
+		}	  	
+      ?>       
       </article>
       <article id="content" class="small-12 medium-8 large-9 column text-center">
-        
-        <div class="prod small-6 medium-4 large-2 view view-first">  
-             <img src="r/img/articulomarked.jpg" />  
-             <div class="mask">  
-             <h2>Producto1</h2>  
-             <p>Descripción</p>  
-                 <a href="#pop-1" class="info open-popup-link">
-                 	Leer más
-                 </a>  
-             </div> 
-        </div> 
+        <?
+		for($i=0;$i<$rowsp;$i++){			
+			echo "<div class='prod small-6 medium-4 large-2 view view-first'>
+			<img src='cp/uploads/thumb/".$mediaUrl[$i]."' />
+				<div class='mask'>
+					<h2>".$producto[$i]."</h2>
+					<p>".$descripcion[$i]."</p>
+					<a href='#pop-1' class='info open-popup-link'>
+						Leer más
+					</a>  
+				</div> 
+			</div> ";
+		}
+		?>
       </article>
   </section>
   <div id="pop-1" class="white-popup mfp-hide">

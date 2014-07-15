@@ -317,4 +317,14 @@ function fFecha ($fecha) {
 	$date = date_create($fecha);
 	return date_format($date, 'd/m/ Y');//F j, Y
 }
+
+function debug_to_console( $data ) {
+
+    if ( is_array( $data ) )
+        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+    else
+        $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+
+    echo $output;
+}
 ?>

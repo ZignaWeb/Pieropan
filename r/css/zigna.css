@@ -420,6 +420,10 @@ article{
 	opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
+#side .view.focus img {
+	opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
 #side .view.no-focus:hover img {
 	opacity: 100;
     filter: alpha(opacity=100); /* For IE8 and earlier */

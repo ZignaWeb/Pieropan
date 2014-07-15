@@ -77,7 +77,7 @@ $secciones=array(
 			
 			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,"force" => 1,
 					"imgsizes" => array (
-						"thumb" => array ( "w" => 500, "h" => "auto"),
+						"thumb" => array ( "w" => 500, "h" => 500),
 					)
 				)
 		)
@@ -108,7 +108,7 @@ $secciones=array(
 					),
 			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,
 					"imgsizes" => array (
-						"thumb" => array ( "w" => 500, "h" => "auto"),
+						"thumb" => array ( "w" => 500, "h" => 500),
 					)
 				)
 		)
