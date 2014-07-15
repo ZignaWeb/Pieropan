@@ -1,3 +1,4 @@
+<? include ("cp/sql.php"); ?>
 <div id='cssmenu' class="show-for-medium-up">  
 <ul>
     <li class="has-sub"><a class="no-hover" href="index.php"><img class="logo" src="r/img/logo2.png"></a></li>   
@@ -5,10 +6,10 @@
     </li>
     <li class='has-sub'><a href='catalogo.php'><span id="a" class="menu-section">Catálogo</span></a>
       <ul id="b">
-         <li><a href='#'>Vajilla</a></li>
-         <li><a href='#'>Carpas</a></li>
-         <li><a href='#'>Rubro 3</a></li>                                  
-         <li class='last'><a href='#'>Rubro 4</a></li>
+         <li><a href='#'></a></li>
+         <li><a href='#'></a></li>
+         <li><a href='#'></a></li>                                  
+         <li class='last'><a href='#'></a></li>
       </ul>
     </li>
     <li class='last'><a href='contacto.php'><span class="menu-section">Contacto</span></a></li>
