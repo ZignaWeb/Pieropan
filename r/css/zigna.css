@@ -414,7 +414,11 @@ article{
     display: block;
     position: relative
 }
-#side .view {
+#side .view img {
+	opacity: 1;
+	-webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 #side .view.no-focus img {
 	opacity: 0.6;

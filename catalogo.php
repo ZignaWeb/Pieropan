@@ -32,7 +32,7 @@
 			$it = "SELECT url FROM ag_media WHERE dep_table = 'productos' AND dep_id = ".$pd['id']."";
 			$iq = mysql_query($it);
 			$id = mysql_fetch_assoc($iq);
-			$mediaUrl[] = $id["url"];
+			$mediaUrlProducto[] = $id["url"];
 		}
 	?>
   </header>
@@ -43,7 +43,7 @@
 			if($getRubroID == $rubroId[$i]){
 				echo "<div class='show-for-medium-up small-6 medium-12 large-6 view rubro'>
 				<a href='catalogo.php?id=".$rubroId[$i]."'>
-					<img src='r/img/rubro-1.jpg' />
+					<img src='cp/uploads/thumb/".$mediaUrlRubro[$i]."' />
 					<div class='mask'></div>
 					<div class='content'>
 						<h2>".$rubro[$i]."</h2>
@@ -56,7 +56,7 @@
 			} else {
 				echo "<div class='show-for-medium-up small-6 medium-12 large-6 view rubro no-focus'>
 				<a href='catalogo.php?id=".$rubroId[$i]."'>
-					<img src='r/img/rubro-1.jpg' />
+					<img src='cp/uploads/thumb/".$mediaUrlRubro[$i]."' />
 					<div class='mask'></div>
 					<div class='content'>
 						<h2>".$rubro[$i]."</h2>
@@ -74,7 +74,7 @@
         <?
 		for($i=0;$i<$rowsp;$i++){			
 			echo "<div class='prod small-6 medium-4 large-2 view view-first'>
-			<img src='cp/uploads/thumb/".$mediaUrl[$i]."' />
+			<img src='cp/uploads/thumb/".$mediaUrlProducto[$i]."' />
 				<div class='mask'>
 					<h2>".$producto[$i]."</h2>
 					<p>".$descripcion[$i]."</p>

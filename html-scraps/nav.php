@@ -6,6 +6,11 @@ $rows = mysql_num_rows($rq);
 while ($rd = mysql_fetch_assoc($rq)){
 	$rubro[] = $rd["nombre"];
 	$rubroId[] = $rd["id"];
+	
+	$rit = "SELECT url FROM ag_media WHERE dep_table = 'rubros' AND dep_id = ".$rd['id']."";
+	$riq = mysql_query($rit);
+	$rid = mysql_fetch_assoc($riq);
+	$mediaUrlRubro[] = $rid["url"];
 }
 ?>
 <div id='cssmenu' class="show-for-medium-up">  
@@ -13,7 +18,7 @@ while ($rd = mysql_fetch_assoc($rq)){
         <li class="has-sub"><a class="no-hover" href="index.php"><img class="logo" src="r/img/logo2.png"></a></li>   
         <li class='has-sub'><a href='empresa.php'><span class="menu-section">Empresa</span></a>             
         </li>
-        <li class='has-sub'><a href='catalogo.php'><span id="a" class="menu-section">Catálogo</span></a>
+        <li class='has-sub'><a href='catalogo.php?id=<?=$rubroId[0]?>'><span id="a" class="menu-section">Catálogo</span></a>
           <ul id="b">
 			<?
             for($i = 0; $i < $rows; $i++){
